@@ -8,6 +8,7 @@ package classes;
  *
  * @author piask
  */
-public class testtteeee {
+public class testi {
+    
     
 }
