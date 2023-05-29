@@ -8,7 +8,6 @@ package classes;
  *
  * @author piask
  */
-public class testi {
-    
+public class testerr {
     
 }
