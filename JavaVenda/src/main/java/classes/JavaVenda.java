@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.javavenda;
+package classes;
+
+import formularios.FrmLogin;
 
 /**
  *
@@ -11,6 +13,8 @@ package com.mycompany.javavenda;
 public class JavaVenda {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        FrmLogin miLogin = new FrmLogin();
+        miLogin.setLocationRelativeTo(null);
+        miLogin.setVisible(true);
     }
 }
