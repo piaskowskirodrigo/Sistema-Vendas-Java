@@ -5,6 +5,7 @@
 package classes;
 
 import formularios.FrmLogin;
+import formularios.FrmPrincipal;
 
 /**
  *
@@ -16,5 +17,7 @@ public class JavaVenda {
         FrmLogin miLogin = new FrmLogin();
         miLogin.setLocationRelativeTo(null);
         miLogin.setVisible(true);
+        
+ 
     }
 }
