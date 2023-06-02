@@ -26,8 +26,82 @@ public class FrmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar1 = new javax.swing.JMenuBar();
+        mnuArquivo = new javax.swing.JMenu();
+        mnuArquivoClientes = new javax.swing.JMenuItem();
+        mnuArquivoProdutos = new javax.swing.JMenuItem();
+        mnuArquivoUsuario = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        mnuArquivotSenha = new javax.swing.JMenuItem();
+        mnuArquivotUsuario = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        mnuMovimentos = new javax.swing.JMenu();
+        mnuMovimentosNovaVenda = new javax.swing.JMenuItem();
+        mnuMovimentosRelatoriovenda = new javax.swing.JMenuItem();
+        mnuAjuda = new javax.swing.JMenu();
+        mnuAjudaSobre = new javax.swing.JMenuItem();
+        mnuAjudaAjuda = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema:");
+
+        mnuArquivo.setText("Arquivo");
+
+        mnuArquivoClientes.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mnuArquivoClientes.setText("Clientes");
+        mnuArquivo.add(mnuArquivoClientes);
+
+        mnuArquivoProdutos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mnuArquivoProdutos.setText("Produtos");
+        mnuArquivo.add(mnuArquivoProdutos);
+
+        mnuArquivoUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mnuArquivoUsuario.setText("Usuarios");
+        mnuArquivoUsuario.setToolTipText("");
+        mnuArquivo.add(mnuArquivoUsuario);
+        mnuArquivo.add(jSeparator1);
+
+        mnuArquivotSenha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mnuArquivotSenha.setText("Trocar Senha");
+        mnuArquivo.add(mnuArquivotSenha);
+
+        mnuArquivotUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mnuArquivotUsuario.setText("Trocar Usuario");
+        mnuArquivo.add(mnuArquivotUsuario);
+        mnuArquivo.add(jSeparator2);
+
+        jMenuItem6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem6.setText("Sair");
+        mnuArquivo.add(jMenuItem6);
+
+        jMenuBar1.add(mnuArquivo);
+
+        mnuMovimentos.setText("Movimentos");
+
+        mnuMovimentosNovaVenda.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mnuMovimentosNovaVenda.setText("Nova Venda");
+        mnuMovimentos.add(mnuMovimentosNovaVenda);
+
+        mnuMovimentosRelatoriovenda.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mnuMovimentosRelatoriovenda.setText("Relatorio Venda");
+        mnuMovimentos.add(mnuMovimentosRelatoriovenda);
+
+        jMenuBar1.add(mnuMovimentos);
+
+        mnuAjuda.setText("Ajuda");
+
+        mnuAjudaSobre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mnuAjudaSobre.setText("Sobre");
+        mnuAjuda.add(mnuAjudaSobre);
+
+        mnuAjudaAjuda.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mnuAjudaAjuda.setText("Ajuda");
+        mnuAjuda.add(mnuAjudaAjuda);
+
+        jMenuBar1.add(mnuAjuda);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -37,7 +111,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 329, Short.MAX_VALUE)
+            .addGap(0, 306, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,5 +153,21 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JMenu mnuAjuda;
+    private javax.swing.JMenuItem mnuAjudaAjuda;
+    private javax.swing.JMenuItem mnuAjudaSobre;
+    private javax.swing.JMenu mnuArquivo;
+    private javax.swing.JMenuItem mnuArquivoClientes;
+    private javax.swing.JMenuItem mnuArquivoProdutos;
+    private javax.swing.JMenuItem mnuArquivoUsuario;
+    private javax.swing.JMenuItem mnuArquivotSenha;
+    private javax.swing.JMenuItem mnuArquivotUsuario;
+    private javax.swing.JMenu mnuMovimentos;
+    private javax.swing.JMenuItem mnuMovimentosNovaVenda;
+    private javax.swing.JMenuItem mnuMovimentosRelatoriovenda;
     // End of variables declaration//GEN-END:variables
 }
