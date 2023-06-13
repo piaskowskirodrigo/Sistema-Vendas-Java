@@ -35,7 +35,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         mnuArquivotSenha = new javax.swing.JMenuItem();
         mnuArquivotUsuario = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        mnuArquivoSair = new javax.swing.JMenuItem();
         mnuMovimentos = new javax.swing.JMenu();
         mnuMovimentosNovaVenda = new javax.swing.JMenuItem();
         mnuMovimentosRelatoriovenda = new javax.swing.JMenuItem();
@@ -71,9 +71,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
         mnuArquivo.add(mnuArquivotUsuario);
         mnuArquivo.add(jSeparator2);
 
-        jMenuItem6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem6.setText("Sair");
-        mnuArquivo.add(jMenuItem6);
+        mnuArquivoSair.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mnuArquivoSair.setText("Sair");
+        mnuArquivo.add(mnuArquivoSair);
 
         jMenuBar1.add(mnuArquivo);
 
@@ -154,7 +154,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JMenu mnuAjuda;
@@ -163,6 +162,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu mnuArquivo;
     private javax.swing.JMenuItem mnuArquivoClientes;
     private javax.swing.JMenuItem mnuArquivoProdutos;
+    private javax.swing.JMenuItem mnuArquivoSair;
     private javax.swing.JMenuItem mnuArquivoUsuario;
     private javax.swing.JMenuItem mnuArquivotSenha;
     private javax.swing.JMenuItem mnuArquivotUsuario;
