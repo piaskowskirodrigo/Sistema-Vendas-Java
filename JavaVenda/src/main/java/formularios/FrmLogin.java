@@ -1,22 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package formularios;
 
 import classes.Dados;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author piask
- */
-public class FrmLogin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FrmLogin
-     */
+public class FrmLogin extends javax.swing.JFrame {
+    private Dados msDados;
+    
+    public void setDados(Dados msdDados){
+        this.msDados = msdDados;
+    }
+
+
     public FrmLogin() {
         initComponents();
     }
@@ -115,7 +112,7 @@ public class FrmLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        Dados msDados = new Dados();
+        
         if (!msDados.validarUsuario(txtUsuario.getText(),new String (txtSenha.getPassword()))){
             JOptionPane.showConfirmDialog(rootPane, "Usuario e senha incorretas");
             txtUsuario.setText("");

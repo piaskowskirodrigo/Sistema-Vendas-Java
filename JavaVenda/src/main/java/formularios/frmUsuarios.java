@@ -1,18 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
+
 package formularios;
 
-/**
- *
- * @author piask
- */
+
+
+
 public class frmUsuarios extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form frmUsuarios
-     */
+    
     public frmUsuarios() {
         initComponents();
     }
@@ -115,6 +109,11 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
 
         btnEditar.setText("Editar");
         btnEditar.setToolTipText("Navegar para o cadastro anterior");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
 
         btnSalvar.setText("Salvar");
         btnSalvar.setToolTipText("Navegar para o proximo cadastro");
@@ -154,7 +153,7 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
                         .addGap(70, 70, 70)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cmbPerfil, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(cmbPerfil, 0, 141, Short.MAX_VALUE))
                     .addComponent(txtIDNome, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtSNome)
                     .addGroup(layout.createSequentialGroup()
@@ -183,7 +182,7 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnCancelar)
@@ -230,7 +229,7 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPesquisar)
                     .addComponent(btnCancelar))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         pack();
@@ -262,6 +261,7 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
         txtConfSenha.setText("");
         cmbPerfil.setSelectedIndex(0);
         
+        txtIDUsuario.requestFocus();
     }//GEN-LAST:event_btnNovoActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
@@ -275,6 +275,13 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
         btnPesquisar.setEnabled(true);
         btnSalvar.setEnabled(false);
         btnCancelar.setEnabled(false);
+        //desabilitar os campos
+        txtIDUsuario.setEnabled(false);
+        txtIDNome.setEnabled(false);
+        txtSNome.setEnabled(false);
+        txtSenha.setEnabled(false);
+        txtConfSenha.setEnabled(false);
+        cmbPerfil.setEnabled(false);
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
@@ -290,6 +297,28 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
         btnCancelar.setEnabled(false);
                                              
     }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        btnPrimeiro.setEnabled(false);
+        btnAnterior.setEnabled(false);
+        btnProximo.setEnabled(false);
+        btnUltimo.setEnabled(false);
+        btnNovo.setEnabled(false);
+        btnEditar.setEnabled(false);
+        btnExcluir.setEnabled(false);
+        btnPesquisar.setEnabled(false);
+        btnSalvar.setEnabled(true);
+        btnCancelar.setEnabled(true);
+        // caixa de textos
+      
+        txtIDNome.setEnabled(true);
+        txtSNome.setEnabled(true);
+        txtSenha.setEnabled(true);
+        txtConfSenha.setEnabled(true);
+        cmbPerfil.setEnabled(true);
+    
+        txtIDNome.requestFocus();
+    }//GEN-LAST:event_btnEditarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
