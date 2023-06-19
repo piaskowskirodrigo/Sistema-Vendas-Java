@@ -2,6 +2,7 @@
 package formularios;
 
 import classes.Dados;
+import javax.swing.JOptionPane;
 
 
 
@@ -9,6 +10,8 @@ import classes.Dados;
 public class frmUsuarios extends javax.swing.JInternalFrame {
     private Dados msDados;
     private int usuAtual = 0;
+    private boolean novo = false;
+    
     
     
     public void setDados(Dados msdDados){
@@ -287,10 +290,48 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
         txtConfSenha.setText("");
         cmbPerfil.setSelectedIndex(0);
         
+        novo = true;
+        
         txtIDUsuario.requestFocus();
+        
+        
+        
     }//GEN-LAST:event_btnNovoActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        if (txtIDUsuario.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Favor inserir um numero de ID");
+            txtIDUsuario.requestFocusInWindow();
+            return;
+        }
+        
+        if (cmbPerfil.getSelectedIndex()== 0){
+            JOptionPane.showMessageDialog(rootPane, "Favor selecionar um perfil");
+            cmbPerfil.requestFocusInWindow();
+            return;
+        }
+        if (txtIDNome.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Favor digitar um nome valido");
+            txtIDNome.requestFocusInWindow();
+            return;
+        }
+        if (txtSNome.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Favor digitar um sobre nome valido");
+            txtSNome.requestFocusInWindow();
+            return;
+        }
+        if (new String(txtSenha.getPassword()).equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Favor digitar uma senha valida");
+            txtSenha.requestFocusInWindow();
+            return;
+        }
+        if (new String(txtConfSenha.getPassword()).equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Favor confirmar sua senha");
+            txtConfSenha.requestFocusInWindow();
+            return;
+        }
+        
+        
         btnPrimeiro.setEnabled(true);
         btnAnterior.setEnabled(true);
         btnProximo.setEnabled(true);
@@ -342,6 +383,8 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
         txtSenha.setEnabled(true);
         txtConfSenha.setEnabled(true);
         cmbPerfil.setEnabled(true);
+        
+        novo = false;
     
         txtIDNome.requestFocus();
     }//GEN-LAST:event_btnEditarActionPerformed
