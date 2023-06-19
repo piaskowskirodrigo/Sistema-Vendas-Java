@@ -6,9 +6,12 @@ public class Dados {
    private int conUsu = 0;
     
     public Dados(){
-        Usuario mUsuario = new Usuario("san","san1","san2","123","1");
+        Usuario mUsuario = new Usuario("san","san1","san2","123",1);
         msUsuarios[conUsu] = mUsuario;
         conUsu++;
+    }
+    public Usuario[] getUsuarios(){
+        return msUsuarios;
     }
         
     

@@ -7,9 +7,9 @@ public class Usuario {
     private String idNome;
     private String snome;
     private String senha;
-    private String perfil;
+    private int perfil;
 
-    public Usuario(String idUsuario, String idNome, String snome, String senha, String perfil) {
+    public Usuario(String idUsuario, String idNome, String snome, String senha, int perfil) {
         this.idUsuario = idUsuario;
         this.idNome = idNome;
         this.snome = snome;
@@ -49,11 +49,11 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public String getPerfil() {
+    public int getPerfil() {
         return perfil;
     }
 
-    public void setPerfil(String perfil) {
+    public void setPerfil(int perfil) {
         this.perfil = perfil;
     }
     

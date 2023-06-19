@@ -122,6 +122,7 @@ public class FrmLogin extends javax.swing.JFrame {
         }
         FrmPrincipal mPrincipal = new FrmPrincipal();
         this.setVisible(false);
+        mPrincipal.setDados(msDados);
         mPrincipal.setExtendedState(JFrame.MAXIMIZED_BOTH);
         mPrincipal.setVisible(true);
         

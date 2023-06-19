@@ -1,10 +1,19 @@
 
 package formularios;
 
+import classes.Dados;
+
 
 
 
 public class frmUsuarios extends javax.swing.JInternalFrame {
+    private Dados msDados;
+    private int usuAtual = 0;
+    
+    
+    public void setDados(Dados msdDados){
+        this.msDados = msdDados;
+    }
 
     
     public frmUsuarios() {
@@ -46,6 +55,23 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setTitle("Usuarios:");
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameOpened(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 255));
@@ -319,6 +345,19 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
     
         txtIDNome.requestFocus();
     }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
+       txtIDUsuario.setText(msDados.getUsuarios()[usuAtual].getIdUsuario());
+       txtIDNome.setText(msDados.getUsuarios()[usuAtual].getIdNome());
+       txtSNome.setText(msDados.getUsuarios()[usuAtual].getSnome());
+       txtSenha.setText(msDados.getUsuarios()[usuAtual].getSenha());
+       txtConfSenha.setText(msDados.getUsuarios()[usuAtual].getSenha());
+       cmbPerfil.setSelectedIndex(msDados.getUsuarios()[usuAtual].getPerfil());
+       
+ 
+       
+       
+    }//GEN-LAST:event_formInternalFrameOpened
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
