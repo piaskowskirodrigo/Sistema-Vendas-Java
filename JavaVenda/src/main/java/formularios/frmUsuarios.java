@@ -320,15 +320,26 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
             txtSNome.requestFocusInWindow();
             return;
         }
-        if (new String(txtSenha.getPassword()).equals("")){
+        
+        String senha = new String (txtSenha.getPassword());
+        String confirmar = new String (txtConfSenha.getPassword());
+        
+        
+        if (senha.equals("")){
             JOptionPane.showMessageDialog(rootPane, "Favor digitar uma senha valida");
             txtSenha.requestFocusInWindow();
             return;
         }
-        if (new String(txtConfSenha.getPassword()).equals("")){
+        if (confirmar.equals("")){
             JOptionPane.showMessageDialog(rootPane, "Favor confirmar sua senha");
             txtConfSenha.requestFocusInWindow();
             return;
+        }
+        
+        if(! senha.equals(confirmar)){
+           JOptionPane.showMessageDialog(rootPane, "A sua senha esta diferente da confirmacao");
+            txtSenha.requestFocusInWindow();
+            return; 
         }
         
         
