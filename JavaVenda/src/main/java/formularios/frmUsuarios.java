@@ -342,7 +342,21 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
             return; 
         }
         
-        
+        int pos = msDados.posicaoUsuario(txtIDUsuario.getText());
+        if(novo){
+        if(pos!=-1){
+        JOptionPane.showMessageDialog(rootPane, "Este usuario ja existe");
+        txtIDUsuario.requestFocusInWindow();
+        return;     
+        }
+        }else{
+            if(pos == -1){
+                JOptionPane.showMessageDialog(rootPane, "Este usuario ainda nao existe");
+                txtIDUsuario.requestFocusInWindow();
+                return;
+            }
+        }
+              
         btnPrimeiro.setEnabled(true);
         btnAnterior.setEnabled(true);
         btnProximo.setEnabled(true);

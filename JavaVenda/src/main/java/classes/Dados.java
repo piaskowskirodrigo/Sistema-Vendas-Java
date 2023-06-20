@@ -26,4 +26,17 @@ public class Dados {
         }
         return false;
     }
+
+
+     public int posicaoUsuario(String usuario){
+        
+        for(int i = 0; i <conUsu; i++){
+            if(msUsuarios[i].getIdUsuario().equals(usuario)){
+            return i;
+        }
+                   
+        }
+        return -1;
+    }
+
 }
