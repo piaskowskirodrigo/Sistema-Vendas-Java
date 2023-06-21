@@ -2,6 +2,7 @@
 package formularios;
 
 import classes.Dados;
+import classes.Usuario;
 import javax.swing.JOptionPane;
 
 
@@ -356,6 +357,15 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
                 return;
             }
         }
+        Usuario msUsuario = new Usuario(
+                txtIDUsuario.getText(), 
+                txtIDNome.getText(), 
+                txtSNome.getText()  , 
+                senha, 
+                cmbPerfil.getSelectedIndex());
+        
+        String msg = msDados.adicionarUsuario(msUsuario);
+        JOptionPane.showMessageDialog(rootPane, msg);
               
         btnPrimeiro.setEnabled(true);
         btnAnterior.setEnabled(true);

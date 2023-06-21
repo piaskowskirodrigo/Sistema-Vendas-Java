@@ -2,7 +2,8 @@
 package classes;
 
 public class Dados {
-   private  Usuario msUsuarios[]= new Usuario[50];
+   private int maxUsu = 50;
+   private  Usuario msUsuarios[]= new Usuario[maxUsu];
    private int conUsu = 0;
     
     public Dados(){
@@ -38,5 +39,12 @@ public class Dados {
         }
         return -1;
     }
-
+     public String adicionarUsuario(Usuario msUsuario){
+         if(conUsu == maxUsu){
+             return  "Nao e possivel cadastrar mais usuarios!";
+         }
+         msUsuarios[conUsu] = msUsuario;
+         conUsu ++;
+         return  "Usuario cadastrado com sucesso!";
+     }
 }
