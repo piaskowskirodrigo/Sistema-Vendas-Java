@@ -11,6 +11,11 @@ public class Dados {
         msUsuarios[conUsu] = mUsuario;
         conUsu++;
     }
+    
+    public int numeroUsuarios(){
+        return conUsu;
+    }
+    
     public Usuario[] getUsuarios(){
         return msUsuarios;
     }
