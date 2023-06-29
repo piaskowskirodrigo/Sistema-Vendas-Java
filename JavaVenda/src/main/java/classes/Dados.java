@@ -70,6 +70,7 @@ public class Dados {
          return  "Usuario editado com sucesso!";
        
      }
+     //deleta usuario
      public String deletarUsuario(int pos){
          for (int i = pos; i <conUsu -1;i ++){
              msUsuarios[i]=msUsuarios[i = 1];
