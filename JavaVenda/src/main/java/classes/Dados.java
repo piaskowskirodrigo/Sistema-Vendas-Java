@@ -52,4 +52,13 @@ public class Dados {
          conUsu ++;
          return  "Usuario cadastrado com sucesso!";
      }
+     public String editarUsuario(Usuario mUsuario, int pos){
+         msUsuarios[pos].setIdNome(mUsuario.getIdNome());
+         msUsuarios[pos].setSnome(mUsuario.getSnome());
+         msUsuarios[pos].setSenha(mUsuario.getSenha());
+         msUsuarios[pos].setPerfil(mUsuario.getPerfil());
+         
+         return  "Usuario editado com sucesso!";
+       
+     }
 }

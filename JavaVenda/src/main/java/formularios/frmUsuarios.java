@@ -270,12 +270,13 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
                     .addComponent(btnNovo)
                     .addComponent(btnEditar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSalvar)
-                    .addComponent(btnExcluir)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnPesquisar)
-                        .addComponent(btnCancelar)))
+                        .addComponent(btnCancelar))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnSalvar)
+                        .addComponent(btnExcluir)))
                 .addContainerGap(110, Short.MAX_VALUE))
         );
 
@@ -355,7 +356,9 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
         }
         
         if(! senha.equals(confirmar)){
-           JOptionPane.showMessageDialog(rootPane, "A sua senha esta diferente da confirmacao");
+            JOptionPane.showMessageDialog(rootPane, "A sua senha esta diferente da confirmacao");
+            txtSenha.setText("");
+            txtConfSenha.setText("");
             txtSenha.requestFocusInWindow();
             return; 
         }
