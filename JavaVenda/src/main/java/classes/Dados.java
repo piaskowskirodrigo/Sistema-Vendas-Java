@@ -7,7 +7,16 @@ public class Dados {
    private int conUsu = 0;
     
     public Dados(){
-        Usuario mUsuario = new Usuario("san","san1","san2","123",1);
+        Usuario mUsuario;
+        mUsuario = new Usuario("san1","san1","san2","123",1);
+        msUsuarios[conUsu] = mUsuario;
+        conUsu++;
+        
+        mUsuario = new Usuario("san2","san1","san2","123",2);
+        msUsuarios[conUsu] = mUsuario;
+        conUsu++;
+        
+        mUsuario = new Usuario("san3","san1","san2","123",1);
         msUsuarios[conUsu] = mUsuario;
         conUsu++;
     }
@@ -44,11 +53,11 @@ public class Dados {
         }
         return -1;
     }
-     public String adicionarUsuario(Usuario msUsuario){
+     public String adicionarUsuario(Usuario mUsuario){
          if(conUsu == maxUsu){
              return  "Nao e possivel cadastrar mais usuarios!";
          }
-         msUsuarios[conUsu] = msUsuario;
+         msUsuarios[conUsu] = mUsuario;
          conUsu ++;
          return  "Usuario cadastrado com sucesso!";
      }
@@ -60,5 +69,12 @@ public class Dados {
          
          return  "Usuario editado com sucesso!";
        
+     }
+     public String deletarUsuario(int pos){
+         for (int i = pos; i <conUsu -1;i ++){
+             msUsuarios[i]=msUsuarios[i = 1];
+         }
+         conUsu--;
+         return  "Usuario deletado com sucesso!";
      }
 }

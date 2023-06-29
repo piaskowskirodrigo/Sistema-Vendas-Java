@@ -377,15 +377,21 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
                 return;
             }
         }
-        Usuario msUsuario = new Usuario(
+        Usuario mUsuario = new Usuario(
                 txtIDUsuario.getText(), 
                 txtIDNome.getText(), 
                 txtSNome.getText()  , 
                 senha, 
                 cmbPerfil.getSelectedIndex());
         
-        String msg = msDados.adicionarUsuario(msUsuario);
+        String msg;
+        if(novo) {
+            msg = msDados.adicionarUsuario(mUsuario);
+        } else{
+            msg = msDados.editarUsuario(mUsuario, pos);
+        }
         JOptionPane.showMessageDialog(rootPane, msg);
+        
               
         btnPrimeiro.setEnabled(true);
         btnAnterior.setEnabled(true);
