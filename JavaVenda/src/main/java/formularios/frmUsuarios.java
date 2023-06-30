@@ -148,6 +148,11 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
 
         btnExcluir.setText("Excluir");
         btnExcluir.setToolTipText("Navegar para o ultimo cadastro");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         btnNovo.setText("Novo");
         btnNovo.setToolTipText("Navegar para o primeiro cadastro");
@@ -481,6 +486,17 @@ public class frmUsuarios extends javax.swing.JInternalFrame {
         }
         mostrarRegistro();
     }//GEN-LAST:event_btnAnteriorActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        int resposta = JOptionPane.showConfirmDialog(rootPane, "deseja realmente deletar este cadastro?");
+        
+       if(resposta !=0){
+           return;
+       }
+        String msg;
+        msg = msDados.deletarUsuario(usuAtual);
+        JOptionPane.showMessageDialog(rootPane, msg);
+    }//GEN-LAST:event_btnExcluirActionPerformed
     private void mostrarRegistro(){
        txtIDUsuario.setText(msDados.getUsuarios()[usuAtual].getIdUsuario());
        txtIDNome.setText(msDados.getUsuarios()[usuAtual].getIdNome());

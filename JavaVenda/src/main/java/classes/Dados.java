@@ -73,7 +73,7 @@ public class Dados {
      //deleta usuario
      public String deletarUsuario(int pos){
          for (int i = pos; i <conUsu -1;i ++){
-             msUsuarios[i]=msUsuarios[i = 1];
+             msUsuarios[i]=msUsuarios[i + 1];
          }
          conUsu--;
          return  "Usuario deletado com sucesso!";
